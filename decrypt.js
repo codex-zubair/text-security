@@ -30,12 +30,12 @@ fs.readFile('database.txt', 'utf8', (err, data) => {
         }
 
 
-        console.log(asciValues);
+        // console.log(asciValues);
 
 
         // *Looping For converting the value of ASCI To Later
 
-        console.log(asciValues[0]);
+
         
         
         for (i of asciValues)
@@ -59,7 +59,11 @@ fs.readFile('database.txt', 'utf8', (err, data) => {
     }
 
 
-    console.log(decrypt(23423));
+     decryptResult = decrypt(23423);
+
+
+    console.log(typeof decryptResult); 
+    
     
 
 
@@ -68,82 +72,3 @@ fs.readFile('database.txt', 'utf8', (err, data) => {
 
 });
 
-
-
-
-
-
-
-
-
-
-
-
-// function encrypt(key, message) {
-
-
-
-//     // *given messages
-
-
-
-//     // *Converting Data into Ascii
-//     for (i of ch) {
-
-//         // console.log(i.charCodeAt(index));
-
-
-//         //* Storing ASCII values
-//         forEncrypt.push(i.charCodeAt(index));
-
-//     }
-
-
-//     // console.log(forEncrypt);
-
-
-  
-
-
-
-
-
-
-
-
-
-//     // *Convert into whole array into string.
-//     let forEncryptString = String(encryptedValueAre);
-
-
-//     console.log(forEncryptString);
-
-
-//     return forEncryptString;
-
-
-// }
-
-
-
-
-
-
-
-
-
-
-
-// var messages = encrypt(23423, "ami aj tumar sathe dekha korte parbona sorry.");
-
-
-
-// const fs = require('fs')
-
-// fs.writeFile('database.txt', messages, err => {
-//     if (err) {
-//         console.err;
-//         return;
-//     }
-
-// });
