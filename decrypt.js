@@ -1,36 +1,72 @@
-function encrypt(key, message) {
+// *Asci values Array
+var asciValues = [];
+let message = [];
 
 
 
-    // *given messages
-    ch = message;
-    index = 0;
-    forEncrypt = [];
-    encryptedValueAre = [];
+// * It will read the database
+var fs = require('fs');
 
-
-
-    // *Converting Data into Ascii
-    for (i of ch) {
-
-        // console.log(i.charCodeAt(index));
-
-
-        //* Storing ASCII values
-        forEncrypt.push(i.charCodeAt(index));
-
+fs.readFile('database.txt', 'utf8', (err, data) => {
+    if (err) {
+        console.error(er);
+        return;
     }
 
 
-    // console.log(forEncrypt);
+// * Decrypt Data function
+    function decrypt(key)
+    {
+        // console.log(data);
+
+        // * Data making array for reading.
+        let validData =  data.split(",")
 
 
-    //*Changed Asci Value with Encrypted key...
-    for (encryptedValue of forEncrypt) {
-        encryptedValueAre.push(encryptedValue * key);
+        // *Looping for converting ASCI values.
+        for(asci of validData)
+        {
+            asciValues.push(asci/key);
+        }
+
+
+        console.log(asciValues);
+
+
+        // *Looping For converting the value of ASCI To Later
+
+        console.log(asciValues[0]);
+        
+        
+        for (i of asciValues)
+        {
+            message.push(String.fromCharCode(i));   
+            
+            // console.log(asciValues.fromCharCode(later));
+        }
+
+
+
+        // * Storing the asci value in array for making string line.
+
+
+        return message;
+
+
+        
+
+        
     }
 
 
+    console.log(decrypt(23423));
+    
+
+
+
+
+
+});
 
 
 
@@ -38,39 +74,76 @@ function encrypt(key, message) {
 
 
 
-    // *Convert into whole array into string.
-    let forEncryptString = String(encryptedValueAre);
-
-
-    console.log(forEncryptString);
 
 
 
 
 
-
-    // // * Print out all string value now...
-    // for (asciValue of forEncryptString) {
-
-    //     // * Convert into number
-    //     stringIntoNumber = parseInt(asciValue);
-    //     console.log(stringIntoNumber);
+// function encrypt(key, message) {
 
 
 
+//     // *given messages
+
+
+
+//     // *Converting Data into Ascii
+//     for (i of ch) {
+
+//         // console.log(i.charCodeAt(index));
+
+
+//         //* Storing ASCII values
+//         forEncrypt.push(i.charCodeAt(index));
+
+//     }
+
+
+//     // console.log(forEncrypt);
+
+
+  
 
 
 
 
-    // }
 
 
 
 
 
-}
+//     // *Convert into whole array into string.
+//     let forEncryptString = String(encryptedValueAre);
+
+
+//     console.log(forEncryptString);
+
+
+//     return forEncryptString;
+
+
+// }
 
 
 
 
-encrypt(23423, "ami aj tumar sathe dekha korte parbona sorry.");
+
+
+
+
+
+
+
+// var messages = encrypt(23423, "ami aj tumar sathe dekha korte parbona sorry.");
+
+
+
+// const fs = require('fs')
+
+// fs.writeFile('database.txt', messages, err => {
+//     if (err) {
+//         console.err;
+//         return;
+//     }
+
+// });

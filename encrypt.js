@@ -1,3 +1,4 @@
+
 function encrypt(key, message) {
 
 
@@ -20,6 +21,8 @@ function encrypt(key, message) {
         forEncrypt.push(i.charCodeAt(index));
 
     }
+
+
 
 
     // console.log(forEncrypt);
@@ -56,16 +59,10 @@ function encrypt(key, message) {
     //     stringIntoNumber = parseInt(asciValue);
     //     console.log(stringIntoNumber);
 
-
-
-
-
-
-
     // }
 
 
-
+    return forEncryptString;
 
 
 }
@@ -73,4 +70,23 @@ function encrypt(key, message) {
 
 
 
-encrypt(23423, "ami aj tumar sathe dekha korte parbona sorry.");
+
+
+
+
+
+
+
+var messages = encrypt(23423, "ami aj tumar sathe dekha korte parbona sorry.");
+
+
+
+const fs = require('fs')
+
+fs.writeFile('database.txt', messages, err => {
+    if (err) {
+        console.err;
+        return;
+    }
+
+});
