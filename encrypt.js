@@ -1,5 +1,4 @@
 
-
 function encrypt(key, message) {
 
 
@@ -24,8 +23,6 @@ function encrypt(key, message) {
     }
 
 
-
-
     // console.log(forEncrypt);
 
 
@@ -36,31 +33,10 @@ function encrypt(key, message) {
 
 
 
-
-
-
-
-
-
     // *Convert into whole array into string.
     let forEncryptString = String(encryptedValueAre);
 
 
-    console.log(forEncryptString);
-
-
-
-
-
-
-    // // * Print out all string value now...
-    // for (asciValue of forEncryptString) {
-
-    //     // * Convert into number
-    //     stringIntoNumber = parseInt(asciValue);
-    //     console.log(stringIntoNumber);
-
-    // }
 
 
     return forEncryptString;
@@ -75,10 +51,20 @@ function encrypt(key, message) {
 
 
 
+// TODO Calling the function.
+var messages = encrypt(123456789, "data sending of user");
 
-var messages = encrypt(23423, "ami aj tumar sathe dekha korte parbona sorry.tumi je amar koto chena seki jano naaaaaa. la lal lalalalaa");
 
 
+
+
+
+
+
+
+
+
+// TODO data Writing system.
 
 const fs = require('fs')
 

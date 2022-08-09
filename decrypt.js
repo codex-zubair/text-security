@@ -4,6 +4,14 @@ let message = [];
 
 
 
+
+
+
+
+
+
+
+// *--------------------------
 // * It will read the database
 var fs = require('fs');
 
@@ -13,7 +21,14 @@ fs.readFile('database.txt', 'utf8', (err, data) => {
         return;
     }
 
+    // *--------------------------
 
+
+
+
+
+
+    // TODO TSFS...
     // * Decrypt Data function
     function decrypt(key) {
         // console.log(data);
@@ -56,7 +71,15 @@ fs.readFile('database.txt', 'utf8', (err, data) => {
     }
 
 
-    decryptResult = decrypt(23423);
+
+
+
+    // * decrypt system .
+    // TODO calling the Function
+    decryptResult = decrypt(123456789);
+
+
+
 
 
 
