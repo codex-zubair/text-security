@@ -1,4 +1,5 @@
 
+
 function encrypt(key, message) {
 
 
@@ -75,9 +76,7 @@ function encrypt(key, message) {
 
 
 
-
-
-var messages = encrypt(23423, "ami aj tumar sathe dekha korte parbona sorry.");
+var messages = encrypt(23423, "ami aj tumar sathe dekha korte parbona sorry.tumi je amar koto chena seki jano naaaaaa. la lal lalalalaa");
 
 
 
@@ -90,3 +89,7 @@ fs.writeFile('database.txt', messages, err => {
     }
 
 });
+
+
+
+
