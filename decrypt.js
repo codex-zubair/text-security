@@ -14,19 +14,17 @@ fs.readFile('database.txt', 'utf8', (err, data) => {
     }
 
 
-// * Decrypt Data function
-    function decrypt(key)
-    {
+    // * Decrypt Data function
+    function decrypt(key) {
         // console.log(data);
 
         // * Data making array for reading.
-        let validData =  data.split(",")
+        let validData = data.split(",")
 
 
         // *Looping for converting ASCI values.
-        for(asci of validData)
-        {
-            asciValues.push(asci/key);
+        for (asci of validData) {
+            asciValues.push(asci / key);
         }
 
 
@@ -36,12 +34,11 @@ fs.readFile('database.txt', 'utf8', (err, data) => {
         // *Looping For converting the value of ASCI To Later
 
 
-        
-        
-        for (i of asciValues)
-        {
-            message.push(String.fromCharCode(i));   
-            
+
+
+        for (i of asciValues) {
+            message.push(String.fromCharCode(i));
+
             // console.log(asciValues.fromCharCode(later));
         }
 
@@ -53,18 +50,20 @@ fs.readFile('database.txt', 'utf8', (err, data) => {
         return message;
 
 
-        
 
-        
+
+
     }
 
 
-     decryptResult = decrypt(23423);
+    decryptResult = decrypt(23423);
 
 
-    console.log(typeof decryptResult); 
-    
-    
+
+    // * Removed the Comma from text.
+    console.log(decryptResult.join(""));
+
+
 
 
 
